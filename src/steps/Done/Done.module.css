@@ -1,0 +1,111 @@
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  gap: 10px;
+  text-align: center;
+  animation: appear 500ms ease;
+}
+
+.done img {
+  width: 100px;
+  height: 100px;
+}
+
+.done h1 {
+  font-size: 2.2rem;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 30px;
+  pointer-events: none;
+}
+
+.buttons button {
+  pointer-events: all;
+}
+
+.buttons button:hover {
+  opacity: 0.8;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex: 1;
+  position: relative;
+}
+
+.field input {
+  width: calc(100% - 16px) !important;
+  pointer-events: none;
+  opacity: 1 !important;
+  text-align: left !important;
+  background: #000;
+}
+
+.field button {
+  all: unset;
+  position: absolute;
+  bottom: 1px;
+  border-radius: 5px;
+  right: 0;
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  background: #111;
+}
+
+.field button span {
+  font-size: 20px;
+  transition: 200ms ease;
+}
+
+.field button:hover {
+  opacity: 1;
+}
+
+.field button:hover span {
+  color: #0064ff;
+}
+
+.field p {
+  font-size: 14px;
+}
+
+.double {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 10px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

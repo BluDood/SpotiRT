@@ -1,0 +1,110 @@
+.create {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  gap: 10px;
+  padding: 50px;
+  animation: appearH 500ms ease;
+}
+
+.create > button {
+  width: fit-content;
+  margin: 5px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.create code {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 2px 5px;
+  background: #181818;
+  border-radius: 5px;
+  user-select: text;
+}
+
+.step {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.create h1 {
+  font-size: 2.2rem;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 30px;
+  pointer-events: none;
+}
+
+.buttons button {
+  pointer-events: all;
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: appear 500ms ease;
+}
+
+.state span {
+  font-size: 3rem;
+  color: #1ed760;
+}
+
+.state span[data-type='error'] {
+  color: #ff0000;
+}
+
+.state p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+@keyframes appearH {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
