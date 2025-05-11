@@ -20,7 +20,7 @@ enum State {
 const RetrieveToken: React.FC<RetrieveTokenProps> = ({
   onStepComplete
 }) => {
-  const { setTokens } = useContext(SpotifyContext)
+  const { setTokens, setCredentials } = useContext(SpotifyContext)
 
   const running = useRef(false)
   const [state, setState] = useState<State>(0)
@@ -64,6 +64,7 @@ const RetrieveToken: React.FC<RetrieveTokenProps> = ({
       }
 
       setTokens(tokens)
+      setCredentials(clientId, clientSecret)
       onStepComplete(true)
       cleanup()
     }
@@ -72,7 +73,7 @@ const RetrieveToken: React.FC<RetrieveTokenProps> = ({
       running.current = true
       retrieve()
     }
-  }, [setTokens, onStepComplete])
+  }, [setTokens, setCredentials, onStepComplete])
 
   return (
     <div className={styles.retrieve}>

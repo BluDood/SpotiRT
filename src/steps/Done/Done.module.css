@@ -99,6 +99,10 @@
   gap: 10px;
 }
 
+.double[data-type='half'] {
+  grid-template-columns: 1fr 1fr;
+}
+
 @keyframes appear {
   from {
     opacity: 0;

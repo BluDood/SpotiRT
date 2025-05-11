@@ -11,7 +11,8 @@ interface DoneProps {
 }
 
 const Done: React.FC<DoneProps> = ({ onStepComplete }) => {
-  const { tokens, timeLeft } = useContext(SpotifyContext)
+  const { tokens, timeLeft, clientId, clientSecret } =
+    useContext(SpotifyContext)
 
   useEffect(() => {
     party.confetti(document.body, {
@@ -25,8 +26,28 @@ const Done: React.FC<DoneProps> = ({ onStepComplete }) => {
     <div className={styles.done}>
       <img src="/icon-192.png" alt="" />
       <h1>Authorization Complete!</h1>
-      <p>Here are your tokens:</p>
+      <p>Here are your credentials:</p>
       <div className={styles.fields}>
+        <div className={styles.double} data-type="half">
+          <div className={styles.field}>
+            <p>Client ID</p>
+            <input type="text" disabled defaultValue={clientId!} />
+            <button
+              onClick={() => navigator.clipboard.writeText(clientId!)}
+            >
+              <span className="material-icons">content_copy</span>
+            </button>
+          </div>
+          <div className={styles.field}>
+            <p>Client Secret</p>
+            <input type="password" disabled defaultValue={clientSecret!} />
+            <button
+              onClick={() => navigator.clipboard.writeText(clientSecret!)}
+            >
+              <span className="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
         <div className={styles.field}>
           <p>Refresh Token</p>
           <input
