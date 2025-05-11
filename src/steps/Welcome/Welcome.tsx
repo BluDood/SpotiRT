@@ -24,7 +24,7 @@ const Welcome: React.FC<WelcomeProps> = ({ onStepComplete }) => {
         <a href="https://bludood.com" target="_blank">
           <img src="/icons/bludood.png" alt="" />
         </a>
-        <a href="https://github.com" target="_blank">
+        <a href="https://github.com/BluDood/SpotiRT" target="_blank">
           <img src="/icons/github.svg" alt="" />
         </a>
       </div>
