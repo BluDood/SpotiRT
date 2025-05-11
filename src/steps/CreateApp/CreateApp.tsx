@@ -58,7 +58,10 @@ const CreateApp: React.FC<CreateAppProps> = ({ onStepComplete }) => {
         </p>
         <ol>
           <li>
-            <a href="https://developer.spotify.com/dashboard">
+            <a
+              href="https://developer.spotify.com/dashboard"
+              target="_blank"
+            >
               Go to the developer dashboard and sign in.
             </a>
           </li>
