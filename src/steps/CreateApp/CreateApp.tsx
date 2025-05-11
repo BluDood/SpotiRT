@@ -80,9 +80,9 @@ const CreateApp: React.FC<CreateAppProps> = ({ onStepComplete }) => {
           </li>
           <li>
             <p>
-              Click <code>Create App</code> and copy your{' '}
-              <code>Client ID</code> and <code>Client Secret</code>. Paste
-              them below, and click "Check".
+              Click <code>Save</code> and copy your <code>Client ID</code>{' '}
+              and <code>Client Secret</code>. Paste them below, and click
+              "Check".
             </p>
           </li>
         </ol>
