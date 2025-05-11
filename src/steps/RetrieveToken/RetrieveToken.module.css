@@ -35,23 +35,18 @@
 }
 
 .buttons {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   display: flex;
   width: 100%;
   justify-content: flex-end;
   padding: 30px;
+  pointer-events: none;
 }
 
 .buttons button {
-  all: unset;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background-color: #0064ff;
-  cursor: pointer;
-  transition: opacity 200ms ease;
-  animation: appear 500ms ease;
+  pointer-events: all;
 }
 
 .buttons button:hover {
